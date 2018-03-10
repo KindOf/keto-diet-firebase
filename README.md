@@ -1,6 +1,6 @@
 # keto-diet-firebase
 
-firebase project for keto-diet project
+firebase project for keto-diet
 ## Prerequisite:
 
  - Node JS and npm
