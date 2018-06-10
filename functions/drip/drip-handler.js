@@ -1,27 +1,30 @@
+const functions = require('firebase-functions');
+
 const client = require('drip-nodejs')({
-	accountId: '9169097',// TODO: functions.config().drip.apikey,
-	token: '9c6ad88a73fe2cd454d520ef581d2002' // TODO: functions.config().drip.accid
+	accountId: functions.config().drip.accountId,
+	token: functions.config().drip.token
 });
 
 const dripHandler = event => {
+	const user = event.data.val();
+
 	const payload = {
 		subscribers: [{
-			email: "john@acme.com",
-			time_zone: "America/Los_Angeles",
+			email: user.email,
 			custom_fields: {
-				name: "John Doe"
+				name: user.username
 			}
 		}]
 	};
 
 	client.createUpdateSubscriber(payload)
 		.then((response) => {
-			// Handle `response.body`
-			console.log(response.body)
+			const subscriber = response.body.subscribers[0]
+
+			console.log('Contact added:', { email: subscriber.email, name: subscriber.custom_fields.name });
 		})
 		.catch((error) => {
-			// Handle errors
-			console.error(error)
+			console.error('ERROR', error)
 		});
 }
 
