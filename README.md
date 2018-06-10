@@ -13,14 +13,16 @@ firebase project for keto-diet
     $ cd keto-diet-firebase
     $ npm install
 *Add firebase project*
-		
+
 
     firebase use --add [your-project-id]
- *Configure your project with sendinblue credentials*
- 
+ *Configure your project with credentials*
+
 
     firebase functions:config:set sendinblue.url="[sendinblue-api-url]"
     firebase functions:config:set sendinblue.apikey="[your-api-key]"
+    firebase functions:config:set drip.accountId="[drip-account-id]"
+    firebase fucntions:config:set drip.token="[drip-api-token]"
 *Deploy:*
 
     firebase deploy
