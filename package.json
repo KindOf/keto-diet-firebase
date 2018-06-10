@@ -1,0 +1,27 @@
+{
+  "name": "keto-diet-firebase",
+  "version": "1.0.0",
+  "description": "firebase project for keto-diet ## Prerequisite:",
+  "main": "index.js",
+  "dependencies": {
+    "drip-nodejs": "^2.1.1",
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^1.0.4",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KindOf/keto-diet-firebase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KindOf/keto-diet-firebase/issues"
+  },
+  "homepage": "https://github.com/KindOf/keto-diet-firebase#readme"
+}
