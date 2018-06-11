@@ -28,4 +28,4 @@ const dripHandler = event => {
 		});
 }
 
-exports = dripHandler;
+exports.dripHandler = dripHandler;

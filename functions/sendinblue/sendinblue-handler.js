@@ -4,7 +4,7 @@ const request = require('request-promise');
 const baseURL = functions.config().sendinblue.url;
 const apikey = functions.config().sendinblue.apikey;
 
-const handler = event => {
+const sibHandler = event => {
   const user = event.data.val();
 
   console.log('User:', user);
@@ -34,3 +34,5 @@ const handler = event => {
       return;
     });
 }
+
+exports.sibHandler = sibHandler;
