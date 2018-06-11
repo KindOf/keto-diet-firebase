@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 
 const client = require('drip-nodejs')({
-	accountId: functions.config().drip.accountId,
+	accountId: functions.config().drip.accountid,
 	token: functions.config().drip.token
 });
 

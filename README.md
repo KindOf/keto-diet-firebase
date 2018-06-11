@@ -21,7 +21,7 @@ firebase project for keto-diet
 
     firebase functions:config:set sendinblue.url="[sendinblue-api-url]"
     firebase functions:config:set sendinblue.apikey="[your-api-key]"
-    firebase functions:config:set drip.accountId="[drip-account-id]"
+    firebase functions:config:set drip.accountid="[drip-account-id]"
     firebase fucntions:config:set drip.token="[drip-api-token]"
 *Deploy:*
 
