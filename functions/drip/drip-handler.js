@@ -18,7 +18,7 @@ const dripHandler = event => {
 		}]
 	};
 
-	client.createUpdateSubscriber(payload)
+	return client.createUpdateSubscriber(payload)
 		.then((response) => {
 			const subscriber = response.body.subscribers[0]
 
