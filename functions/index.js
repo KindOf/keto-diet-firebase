@@ -1,12 +1,12 @@
 const functions = require('firebase-functions');
 
-const dripHandler = require('./drip/drip-handler');
-const sibHandler = require('./sendinblue/sendinblue-handler');
+const dripModule = require('./drip/drip-handler');
+const sibModule = require('./sendinblue/sendinblue-handler');
 
 const DATABASE = '/users/{id}';
 
 exports.sendinblueHandler = functions.database.ref(DATABASE)
-  .onUpdate(sibHandler);
+  .onUpdate(sibModule.sibHandler);
 
 exports.dripHandler = functions.database.ref(DATABASE)
-  .onUpdate(dripHandler);
+  .onUpdate(dripModule.dripHandler);
