@@ -11,6 +11,7 @@ const dripHandler = event => {
 	const payload = {
 		subscribers: [{
 			email: user.email,
+			tags: ['New Subs'],
 			custom_fields: {
 				name: user.username
 			}
